@@ -18,8 +18,7 @@ export class LocationFromIP extends LitElement {
   static get properties() {
     return {
       long: { type: Number, reflect: true },
-      lat: { type: Number },
-      reflect: true,
+      lat: { type: Number, reflect: true },
     };
   }
 
