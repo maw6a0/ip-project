@@ -66,7 +66,12 @@ export class LocationFromIP extends LitElement {
     // this function runs every time a properties() declared variable changes
     // this means you can make new variables and then bind them this way if you like
     const url = `https://maps.google.com/maps?q=${this.lat},${this.long}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
-    return html`<iframe title="Where you are" src="${url}"></iframe> `;
+    return html`<iframe title="Where you are" src="${url}"></iframe>
+      <ul>
+        <a href="https://www.google.com/maps/@${this.lat},${this.long},14z">
+          Open in Google Maps
+        </a>
+      </ul>`;
   }
 }
 
